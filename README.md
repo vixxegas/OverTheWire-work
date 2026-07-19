@@ -1,9 +1,7 @@
 # OverTheWire Learning Journal
 
 Personal notes and scripts documenting my progress through OverTheWire wargames, 
-as part of ongoing cybersecurity skill development alongside my HIDS dissertation 
-work and CCNA Security / SC-900 certification prep.
-
+as part of ongoing cybersecurity skill development.
 ## Purpose
 
 This repo tracks concepts learned, tools used, and techniques practiced 
