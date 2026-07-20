@@ -21,4 +21,12 @@ level 4 --> level 5:
 command: cat -- -file07
 pw: 6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG
 
+level 5 --> level 6:
+command: find -size 1033c ! - executable -readable
+lesson: there were multiple directories with numerous files in each one, so trying to discover the password by manually going through each one would be time consuming. I used 'man find' to go through the manual and discovered how to narrow down the search, by listing the requirements for the file.
+pw: pXa26xhMWaC2SvDotA4r9EgZkulOeSBW
 
+level 6 --> level 7:
+command: find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+lesson: I learnt two new things - '/' after find starts the search point in the whole system. when trying to execute the command above without '2>/dev/null' the terminal was flooded with permission denied messaged, this was beacuse find goes through every directory and since i would be an underprivileged user i was denied - why there was error messages. '2>/dev/null' ignores all the error messages and presents successful matchings.
+pw: Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
