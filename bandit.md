@@ -1,4 +1,4 @@
-level 0:
+##level 0:##
 commaand: sudo ssh bandit0@bandit.labs.overthewire.org -p 2220
 
 level 0 --> level 1:
