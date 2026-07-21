@@ -30,3 +30,7 @@ level 6 --> level 7:
 command: find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
 lesson: I learnt two new things - '/' after find starts the search point in the whole system. when trying to execute the command above without '2>/dev/null' the terminal was flooded with permission denied messaged, this was beacuse find goes through every directory and since i would be an underprivileged user i was denied - why there was error messages. '2>/dev/null' ignores all the error messages and presents successful matchings.
 pw: Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
+
+level 7 --> level 8:
+command: grep "millionth" data.txt
+pw: VR1ljMayciFxbnUokuQmJFw6QC9VKtub
