@@ -48,7 +48,7 @@ pw: VR1ljMayciFxbnUokuQmJFw6QC9VKtub
 #### level 8 --> level 9:
 command: sort data.txt | uniq -u
 
-lesson: learning pipping '|' and what it does, from what i learnt it is a way to combine to commands together - passing from left to right. In this level, I used it to sort out a file and print out a string that hasn't benn repeated and shown once.
+lesson: learning pipping '|' and what it does, from what i learnt it is a way to combine to commands together - passing from left to right. In this level, I used it to sort out a file and print out a string that hasn't been repeated and shown once.
 
 pw: EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
 
@@ -59,4 +59,23 @@ mistake: i first use cat to read the file and it presented alot of unreadable te
 
 lesson: using pipping again and making the data file into a strings file and then use grep to find any lines with '='
 
-password: B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+pw: B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+
+### level 10 --> level 11:
+command: base64 -d data.txt
+
+lesson: using the link provided by OverTheWire and reading through the manual, base64 decode/encodes data. Using the '-d' option alongside it decodes the selected file after.
+
+pw: pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+
+### level 11 --> level 12:
+command: tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt
+
+mistakes: i was trying to use the command sort to try reorganise the file, but discovered a command 'tr' which translates or deletes characters.
+
+lesson: Using redirection learnt from previous levels and the link provided by OTW, I was able to execute the correct command to get the pw for the next level.
+
+pw: GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+
+### level 12 --> level 13:
+commands:
