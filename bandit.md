@@ -79,3 +79,28 @@ pw: GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
 
 ### level 12 --> level 13:
 commands:
+
+​```bash
+#doing what OTW says to do
+mktemp -d
+cd /tmp/tmp.XXXXXXXXXX
+...
+#reverse the hexdump back into binary
+xxd -r data.txt > data.decoded
+...
+#identifying file type
+file data.decoded
+...
+#this will be explained later on, depending on file type --> decompress
+mv data.decoded data.gz → gunzip data.gz #if gzip 
+mv data.decoded data.bz2 → bunzip2 data.bz2 #if bzip2
+mv data.decoded data.tar → tar -xf data.tar #if tar
+...
+#until file type is ASCII, repeat
+file data
+cat data
+```
+
+lesson: to discover the password in this level, I had to learn about reverse hexdumps and decompress files depending on the file type to make it an ASCII file type so it is readable. This level wasn't done alone, but with the use of AI as it became quite confusing when it got to decompressing section and doing it continously until the right file type was made.
+
+pw: qQYQiHOBPR8zR61qxYqX45quvihF2uzk
