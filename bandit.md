@@ -104,3 +104,51 @@ cat data
 lesson: to discover the password in this level, I had to learn about reverse hexdumps and decompress files depending on the file type to make it an ASCII file type so it is readable. This level wasn't done alone, but with the use of AI as it became quite confusing when it got to decompressing section and doing it continously until the right file type was made.
 
 pw: qQYQiHOBPR8zR61qxYqX45quvihF2uzk
+
+### level 13 --> level 14:
+commands:
+```bash
+#copying the private key from bandit 13 to my home directory
+scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private .   
+
+#adding permissions to the private key, so it can be used
+sudo chmod 700 sshprivate.key
+
+#ssh into bandit14 with the private key
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+
+#reading the file listed in OTW
+cat /etc/bandit_pass/bandit14
+```
+
+lesson: This level taught SSH key-based authentication as an alternative to passwords, including how private key file permissions are enforced by SSH for security, and how to securely transfer files between hosts using scp.
+
+pw: aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+
+### level 14 --> level 15:
+commands:
+```bash
+#within level14, connect to the local host
+nc localhost 30000
+
+#entering the password to level 14, password for level 15 should appear
+```
+
+lesson: understanding what nc (netcat) does, opening a raw connection. Discovered this is used by attackers frequently, so understanding how it works and what it can be used for, will be important for a blue-team.
+
+pw: pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+
+### level 15 --> level 16:
+commands:
+```bash
+#connecting to port 30001 on localhost using SSL/TLS encryption
+openssl s_client -connect localhost:30001
+```
+
+mistakes: I was treating it the same as nc and it was just creating errors, discovered it was the way i was writing localhost, the port and missing '-connect'
+
+lesson: the difference between SSL/TLS and nc, a brief understanding of TLS handshake, what it looks like to have a successful connection and how to execute it.
+
+pw: kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
+### level 16 --> level 17:
