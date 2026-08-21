@@ -152,3 +152,28 @@ lesson: the difference between SSL/TLS and nc, a brief understanding of TLS hand
 pw: kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
 
 ### level 16 --> level 17:
+commands:
+```bash
+#port scanning for ports between 31000-32000 and service/version info
+nmap -p 31000-32000 -sV localhost
+
+#once discovered a list of different ports showed and 2 saying the service/version is ssl, connecting to the port and using the pw from level 16
+cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet
+```
+mistake: I figured out the nmap command and using prior knowledge able to connect to port 31790, but when entering the password of level 16 it did not work, so i had to use a walkthrough.
+
+lesson: able to pipe the password and the use of nmap and how to narrow down the search.
+
+pw: private key to get into level 17 (level 13-->level 14):
+
+### level 17 --> level 18:
+command:
+```bash
+cat | diff passwords.new passwords.old
+```
+
+lesson: learnt a new command diff to find the difference between two files.
+
+pw: OQxXZjELndr90zuhOTDYBEomI0SZITXI
+
+### level 18 --> level 19:
