@@ -177,3 +177,32 @@ lesson: learnt a new command diff to find the difference between two files.
 pw: OQxXZjELndr90zuhOTDYBEomI0SZITXI
 
 ### level 18 --> level 19:
+```bash
+#listing  all files and directories
+ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+
+#reading the readme file
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+```
+
+lesson: able to add commands on the end of the ssh connection.
+
+pw: KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
+
+### level 19 --> level 20:
+```bash
+#executable file
+./bandit20-do
+
+#listing all possible files where the password files are located
+./bandit20-do ls /etc/banditpass
+
+#reading file
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+lesson: From previous uni work, i noticed that the file 'bandit20-do' is an executable file, so when running it it gave a clue on how to proceed with the level.
+
+pw: 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
+
+## level 20 --> level 21:
